@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "723928901772",
+    "project_id": "duckcination",
+    "storage_bucket": "duckcination.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723928901772:android:85ed319ffe0f9197d3b3a9",
+        "android_client_info": {
+          "package_name": "com.example.duckcination"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723928901772-8ue57m1lod9ahjc2gup604u7hkvi5bq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1c7IP9dIP1D1sdKk_OkYRolS71LzmhEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723928901772-8ue57m1lod9ahjc2gup604u7hkvi5bq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
