@@ -2,14 +2,20 @@ import 'package:duckcination/models/vaccine.dart';
 import 'package:flutter/material.dart';
 
 class VaccineCard extends StatefulWidget {
-  VaccineCard(this.vaccine, {Key? key}) : super(key: key);
-  Vaccine vaccine;
+  const VaccineCard(this.vaccine, {Key? key}) : super(key: key);
+  final Vaccine vaccine;
 
   @override
   State<VaccineCard> createState() => _VaccineCardState();
 }
 
 class _VaccineCardState extends State<VaccineCard> {
+  void changeName(){
+    setState(() {
+      widget.vaccine.name='clicked';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -19,7 +25,7 @@ class _VaccineCardState extends State<VaccineCard> {
       shadowColor: Colors.amberAccent,
       elevation: 20,
       child: Padding(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -32,6 +38,7 @@ class _VaccineCardState extends State<VaccineCard> {
                 height: 70,
               ),
               Text(widget.vaccine.name),
+              TextButton(onPressed: (){changeName();}, child: Text('11')),
             ],
           ),
         ),
