@@ -2,8 +2,9 @@ import 'package:duckcination/models/vaccine.dart';
 import 'package:flutter/material.dart';
 
 var statusColors = {
-  VaccineStatus.done: [Colors.lightGreen, Colors.lightGreen.shade300],
-  VaccineStatus.todo: [Colors.red.shade50, Colors.red.shade300],
+  VaccineStatus.done: [Colors.lightGreen, Colors.yellowAccent.shade200],
+  VaccineStatus.todo: [Colors.red.shade100, Colors.red.shade300],
+  VaccineStatus.later: [Colors.grey.shade300, Colors.grey.shade100],
 };
 
 class VaccineCard extends StatefulWidget {
@@ -24,13 +25,13 @@ class _VaccineCardState extends State<VaccineCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(30),
+      padding: const EdgeInsets.all(10),
       child: Container(
         padding: const EdgeInsets.all(30),
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: statusColors[widget.vaccine.vaccineStatus]!),
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+            borderRadius: const BorderRadius.all(Radius.circular(20))),
         child: Row(
           children: [
             Image(

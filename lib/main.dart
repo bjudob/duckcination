@@ -55,15 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png',VaccineStatus.todo)),
+              VaccineCard(Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.todo)),
+              VaccineCard(Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.todo)),
+              VaccineCard(Vaccine('Rotavirus', 7,8,'img/rotavirus.png',VaccineStatus.todo)),
+              VaccineCard(Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.todo)),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: ()=>{},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
