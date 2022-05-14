@@ -1,8 +1,20 @@
+enum VaccineStatus {
+  done,
+  todo,
+  later
+}
+
 class Vaccine{
   String name;
-  int age_min;
-  int age_max;
+  int ageMin;
+  int ageMax;
+  late String ageRecommendation;
   String image;
+  VaccineStatus vaccineStatus;
+  bool isDone=false;
 
-  Vaccine(this.name,this.age_min,this.age_max,this.image){}
+
+  Vaccine(this.name,this.ageMin,this.ageMax,this.image,this.vaccineStatus){
+    ageRecommendation='$ageMin-$ageMax years old';
+  }
 }

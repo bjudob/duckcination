@@ -1,6 +1,11 @@
 import 'package:duckcination/models/vaccine.dart';
 import 'package:flutter/material.dart';
 
+var statusColors = {
+  VaccineStatus.done: [Colors.lightGreen, Colors.lightGreen.shade300],
+  VaccineStatus.todo: [Colors.red.shade50, Colors.red.shade300],
+};
+
 class VaccineCard extends StatefulWidget {
   const VaccineCard(this.vaccine, {Key? key}) : super(key: key);
   final Vaccine vaccine;
@@ -10,9 +15,9 @@ class VaccineCard extends StatefulWidget {
 }
 
 class _VaccineCardState extends State<VaccineCard> {
-  void changeName(){
+  void changeName() {
     setState(() {
-      widget.vaccine.name='clicked';
+      widget.vaccine.vaccineStatus = VaccineStatus.done;
     });
   }
 
@@ -29,7 +34,7 @@ class _VaccineCardState extends State<VaccineCard> {
         child: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Colors.lightGreen, Colors.lightGreen.shade300])),
+                  colors: statusColors[widget.vaccine.vaccineStatus]!)),
           child: Row(
             children: [
               Image(
@@ -37,8 +42,23 @@ class _VaccineCardState extends State<VaccineCard> {
                 width: 70,
                 height: 70,
               ),
-              Text(widget.vaccine.name),
-              TextButton(onPressed: (){changeName();}, child: Text('11')),
+              Column(
+                children: [
+                  Text(
+                    widget.vaccine.name,
+                    style: const TextStyle(fontSize: 22),
+                  ),
+                  Text(
+                    widget.vaccine.ageRecommendation,
+                    style: const TextStyle(fontSize: 15),
+                  ),
+                ],
+              ),
+              Checkbox(
+                  value: widget.vaccine.vaccineStatus == VaccineStatus.done,
+                  onChanged: (checked) {
+                    changeName();
+                  })
             ],
           ),
         ),

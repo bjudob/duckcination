@@ -55,11 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png')),
-              VaccineCard(Vaccine('Hepatitis C', 7,8,'img/hepatitis_b.png')),
-              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png')),
-              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png')),
-              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png')),
+              VaccineCard(Vaccine('Hepatitis B', 7,8,'img/hepatitis_b.png',VaccineStatus.todo)),
             ],
           ),
         ),
