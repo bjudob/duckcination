@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 var statusColors = {
   VaccineStatus.done: [Colors.lightGreen, Colors.yellowAccent.shade200],
-  VaccineStatus.todo: [Colors.red.shade100, Colors.red.shade300],
-  VaccineStatus.later: [Colors.grey.shade300, Colors.grey.shade100],
+  VaccineStatus.todo: [Colors.red.shade300, Colors.red.shade200],
+  VaccineStatus.later: [Colors.grey.shade300, Colors.grey.shade200],
 };
 
 class VaccineCard extends StatefulWidget {
