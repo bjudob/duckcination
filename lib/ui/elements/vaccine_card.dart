@@ -27,7 +27,7 @@ class _VaccineCardState extends State<VaccineCard> {
     return Container(
       padding: const EdgeInsets.all(10),
       child: Container(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: statusColors[widget.vaccine.vaccineStatus]!),
@@ -36,20 +36,22 @@ class _VaccineCardState extends State<VaccineCard> {
           children: [
             Image(
               image: AssetImage(widget.vaccine.image),
-              width: 70,
-              height: 70,
+              width: 100,
+              height: 100,
             ),
-            Column(
-              children: [
-                Text(
-                  widget.vaccine.name,
-                  style: const TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  widget.vaccine.ageRecommendation,
-                  style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
-                ),
-              ],
+            Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    widget.vaccine.name,
+                    style: const TextStyle(fontSize: 22,fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    widget.vaccine.ageRecommendation,
+                    style: const TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ),
             Checkbox(
                 value: widget.vaccine.vaccineStatus == VaccineStatus.done,
