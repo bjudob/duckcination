@@ -27,16 +27,19 @@ class _ChildScreenState extends State<ChildScreen> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              VaccineCard(Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.todo)),
-              VaccineCard(Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.todo),),
-              VaccineCard(Vaccine('Rotavirus', 7,8,'img/rotavirus.png',VaccineStatus.todo),),
-              VaccineCard(Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.later),),
-            ],
-          ),
-        ),
+            child: Column(
+          children: [
+            SizedBox(
+              height: 2000,
+              child: ListView.builder(
+                  itemCount: widget.child.vaccines.length,
+                  itemBuilder: (context, index) {
+                    final item = widget.child.vaccines[index];
+                    return VaccineCard(item);
+                  }),
+            )
+          ],
+        )),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
@@ -53,3 +56,13 @@ final item = widget.child.vaccines[index];
 return VaccineCard(item);
 },
 )*/
+
+// child: Column(
+// mainAxisAlignment: MainAxisAlignment.center,
+// children: <Widget>[
+// VaccineCard(Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.todo)),
+// VaccineCard(Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.todo),),
+// VaccineCard(Vaccine('Rotavirus', 7,8,'img/rotavirus.png',VaccineStatus.todo),),
+// VaccineCard(Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.later),),
+// ],
+// ),

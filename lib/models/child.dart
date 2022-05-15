@@ -13,7 +13,7 @@ class Child{
       Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.todo),
       Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.todo),
       Vaccine('Rotavirus', 7,8,'img/rotavirus.png',VaccineStatus.todo),
-      Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.todo),
+      Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.later),
     ];
   }
 }
