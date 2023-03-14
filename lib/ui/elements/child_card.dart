@@ -1,3 +1,4 @@
+import 'package:duckcination/ui/screens/child_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,36 +28,44 @@ class _ChildCardState extends State<ChildCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: genderColors[widget.child.gender]!),
-            borderRadius: const BorderRadius.all(Radius.circular(20))),
-        child: Row(
-          children: [
-            Image(
-              image: AssetImage(genderImages[widget.child.gender]!),
-              width: 100,
-              height: 100,
-            ),
-            Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    widget.child.name,
-                    style: const TextStyle(
-                        fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    widget.child.age.toString() + ' years old',
-                    style: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.bold),
-                  ),
-                ],
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ChildScreen(child: widget.child)),
+          );
+        },
+        child: Container(
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: genderColors[widget.child.gender]!),
+              borderRadius: const BorderRadius.all(Radius.circular(20))),
+          child: Row(
+            children: [
+              Image(
+                image: AssetImage(genderImages[widget.child.gender]!),
+                width: 100,
+                height: 100,
               ),
-            ),
-          ],
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(
+                      widget.child.name,
+                      style: const TextStyle(
+                          fontSize: 26, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      widget.child.age.toString() + ' years old',
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
