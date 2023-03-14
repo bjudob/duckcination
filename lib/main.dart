@@ -42,10 +42,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // return ChildScreen(child: Child('Jennyfer', DateTime(2018,9,26)));
     List<Child> children = [
-      Child('Reki', DateTime(1998,9,26)),
-      Child('Aliz', DateTime(2000,1,2)),
-      Child('Boti', DateTime(1996,11,7)),
-      Child('Lehel', DateTime(1999,9,17)),
+      Child('Reki', DateTime(1998,9,26), Gender.girl, 6),
+      Child('Aliz', DateTime(2000,1,2), Gender.girl, 4),
+      Child('Boti', DateTime(1996,11,7), Gender.boy, 7),
+      Child('Lehel', DateTime(1999,9,17), Gender.boy, 3),
     ];
     return DuckHome(children: children,);
   }
