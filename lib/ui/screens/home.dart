@@ -76,7 +76,7 @@ class _DuckHomeState extends State<DuckHome> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 500,
+                        height: 400,
                         child: GridView.builder(
                             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3

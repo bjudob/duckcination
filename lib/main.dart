@@ -38,9 +38,38 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<Widget> tabs = [
+    DuckHome(),
+    Text("12"),
+    Text("34"),
+  ];
+  int selectedIndex=0;
+
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // return ChildScreen(child: Child('Jennyfer', DateTime(2018,9,26)));
-    return DuckHome();
+    return Scaffold(
+      body: tabs[selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.vaccines, color: Colors.orange,), label: "Kids"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calendar_today_rounded, color: Colors.orange,), label: "Calendar"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person, color: Colors.orange,), label: "Call"),
+        ],
+        currentIndex: selectedIndex,
+        fixedColor: Colors.deepPurple,
+        onTap: onItemTapped,
+        selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
+      ),
+    );
   }
 }
