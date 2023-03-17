@@ -60,15 +60,15 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.vaccines, color: Colors.orange,), label: "Kids"),
+              icon: Icon(Icons.vaccines, color: Colors.black45,), label: "Kids",),
           BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_today_rounded, color: Colors.orange,), label: "Calendar"),
+              icon: Icon(Icons.calendar_today_rounded, color: Colors.black45,), label: "Calendar"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.orange,), label: "Profile"),
+              icon: Icon(Icons.person, color: Colors.black45,), label: "Profile"),
         ],
         currentIndex: selectedIndex,
         fixedColor: Colors.black,
-        backgroundColor: Colors.orange[300],
+        backgroundColor: Colors.orange[600],
         onTap: onItemTapped,
         selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
       ),

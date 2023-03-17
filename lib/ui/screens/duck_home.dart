@@ -119,13 +119,6 @@ class _DuckHomeState extends State<DuckHome> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Add your onPressed code here!
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
