@@ -1,5 +1,6 @@
 import 'package:duckcination/provider/duck_provider.dart';
 import 'package:duckcination/ui/elements/big_button.dart';
+import 'package:duckcination/ui/screens/history_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -82,9 +83,9 @@ class _DuckHomeState extends State<DuckHome> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
-                      BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program",),
-                      BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History",),
-                      BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor",),
+                      BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program", target_screen: HistoryScreen(),),
+                      BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History", target_screen: HistoryScreen(),),
+                      BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor", target_screen: HistoryScreen(),),
                     ],
                   ),
                 ],
