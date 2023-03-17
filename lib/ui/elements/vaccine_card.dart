@@ -61,8 +61,8 @@ class _VaccineCardState extends State<VaccineCard> {
                         child: Image.asset(
                           widget.vaccine.image,
                           fit: BoxFit.contain,
-                          width: 70,
-                          height: 70,
+                          width: 60,
+                          height: 60,
                         ),
                       ),
                     ),

@@ -34,27 +34,30 @@ class _VaccineScreenState extends State<VaccineScreen> {
         title: const Text('Duckcination'),
       ),
       backgroundColor: Colors.orange.shade200,
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20.0, 20, 20, 10),
         child: SingleChildScrollView(
-            child: Column(
+            child: Expanded(
+              child: Column(
           children: [
-            Hero(
-              tag: widget.vaccine.name!,
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  child: Image.asset(
-                    widget.vaccine.image!,
-                    fit: BoxFit.contain,
-                    width: 300,
-                    height: 300,
+              Hero(
+                tag: widget.vaccine.name!,
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    child: Image.asset(
+                      widget.vaccine.image!,
+                      fit: BoxFit.contain,
+                      width: 300,
+                      height: 300,
+                    ),
                   ),
                 ),
               ),
-            ),
-            getDescriptionWidgets(),
+              getDescriptionWidgets(),
           ],
-        )),
+        ),
+            )),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
