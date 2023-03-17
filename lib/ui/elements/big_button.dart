@@ -26,7 +26,7 @@ class _BigButtonState extends State<BigButton> {
             borderRadius: BorderRadius.all(Radius.circular(20))
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20,20,20,20),
+          padding: const EdgeInsets.fromLTRB(15,15,15,15),
           child: Column(
             children: [
               Icon(widget.iconData, size: 50, color: Colors.orange,),

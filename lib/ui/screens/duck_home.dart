@@ -33,7 +33,7 @@ class _DuckHomeState extends State<DuckHome> {
   Widget build(BuildContext context) {
     children = duckProvider.getChildren();
     return Scaffold(
-      backgroundColor: Colors.orange.shade100,
+      backgroundColor: Colors.orange.shade200,
       body: Center(
         child: Column(
           children: [
@@ -91,8 +91,8 @@ class _DuckHomeState extends State<DuckHome> {
               ),
             ),
             Container(
-              decoration: const BoxDecoration(
-                  color: Colors.white,
+              decoration: BoxDecoration(
+                  color: Colors.orange.shade100,
                   borderRadius: BorderRadius.all(Radius.circular(30))
               ),
               child: SingleChildScrollView(
