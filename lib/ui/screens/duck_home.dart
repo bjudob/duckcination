@@ -75,10 +75,10 @@ class _DuckHomeState extends State<DuckHome> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  BigButton(),
-                  BigButton(),
-                  BigButton(),
+                children: const [
+                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination\nProgram",),
+                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination\nProgram",),
+                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "Vaccination\nProgram",),
                 ],
               ),
               SingleChildScrollView(
@@ -87,7 +87,7 @@ class _DuckHomeState extends State<DuckHome> {
                       SizedBox(
                         height: 400,
                         child: Container(
-                          color: Colors.grey[100],
+                          //color: Colors.grey[100],
                           child: GridView.builder(
                               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3
