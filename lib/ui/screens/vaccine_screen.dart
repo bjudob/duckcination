@@ -1,20 +1,22 @@
 import 'package:duckcination/models/child.dart';
+import 'package:duckcination/provider/duck_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../elements/vaccine_card.dart';
 
-class ChildScreen extends StatefulWidget {
-  const ChildScreen({Key? key, required this.child}) : super(key: key);
-  final Child child;
+class VaccineScreen extends StatefulWidget {
+  const VaccineScreen({Key? key}) : super(key: key);
 
   @override
-  State<ChildScreen> createState() => _ChildScreenState();
+  State<VaccineScreen> createState() => _VaccineScreenState();
 }
 
-class _ChildScreenState extends State<ChildScreen> {
+class _VaccineScreenState extends State<VaccineScreen> {
+
   @override
   Widget build(BuildContext context) {
+    Child child=DuckProvider().getChild();
     return Scaffold(
       backgroundColor: Colors.amberAccent.shade100,
       appBar: AppBar(
@@ -27,9 +29,9 @@ class _ChildScreenState extends State<ChildScreen> {
             SizedBox(
               height: 2000,
               child: ListView.builder(
-                  itemCount: widget.child.vaccines.length,
+                  itemCount: child.vaccines.length,
                   itemBuilder: (context, index) {
-                    final item = widget.child.vaccines[index];
+                    final item = child.vaccines[index];
                     return VaccineCard(item);
                   }),
             )

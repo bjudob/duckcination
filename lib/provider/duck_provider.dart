@@ -8,7 +8,13 @@ class DuckProvider{
     Child('Lehel', DateTime(1999,9,17), Gender.boy, 3),
   ];
 
+  Child child=children[0];
+
   List<Child> getChildren(){
     return children;
+  }
+
+  Child getChild(){
+    return child;
   }
 }

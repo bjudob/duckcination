@@ -30,10 +30,7 @@ class _ChildCardState extends State<ChildCard> {
       padding: const EdgeInsets.all(10),
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ChildScreen(child: widget.child)),
-          );
+          //
         },
         child: Container(
           padding: const EdgeInsets.all(10),
