@@ -31,9 +31,9 @@ class _ShowTextState extends State<ShowText> {
                 children: [
               Text(
                 widget.description.title,
-                style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
-              const Icon(Icons.arrow_drop_down_outlined, size: 30),
+              const Icon(Icons.arrow_drop_down_outlined, size: 25),
             ]),
           ),
           const Divider(

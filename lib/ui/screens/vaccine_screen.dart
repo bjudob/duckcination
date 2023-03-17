@@ -21,14 +21,15 @@ class _VaccineScreenState extends State<VaccineScreen> {
     List<Description> descriptions=widget.vaccine.descriptions;
     List<Widget> list = [];
     for(var i = 0; i < descriptions.length; i++){
-      list.add(ShowText(description: descriptions[i]));
+      list.add(Row(
+          children: [ShowText(description: descriptions[i])]
+      ));
     }
-    return Row(children: list);
+    return Column(children: list);
   }
 
   @override
   Widget build(BuildContext context) {
-    Child child = DuckProvider().getChild();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Duckcination'),
