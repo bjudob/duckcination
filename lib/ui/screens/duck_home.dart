@@ -35,66 +35,76 @@ class _DuckHomeState extends State<DuckHome> {
     return Scaffold(
       backgroundColor: Colors.orange.shade100,
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 80, 10, 0),
-          child: Column(
-            children: [
-              Row(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 65, 10, 20),
+              child: Column(
                 children: [
-                  Image.asset(
-                    child.image,
-                    height: 100,
-                    width: 100,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        DropdownButton(
-                          value: child.name,
-                          items: children.map<DropdownMenuItem<String>>((Child child) {
-                              return DropdownMenuItem<String>(
-                                value: child.name,
-                                child: Text(
-                                    child.name,
-                                    style: const TextStyle(
-                                        fontSize: 40,
-                                        fontWeight : FontWeight.bold,
+                  Row(
+                    children: [
+                      Image.asset(
+                        child.image,
+                        height: 100,
+                        width: 100,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            DropdownButton(
+                              value: child.name,
+                              items: children.map<DropdownMenuItem<String>>((Child child) {
+                                  return DropdownMenuItem<String>(
+                                    value: child.name,
+                                    child: Text(
+                                        child.name,
+                                        style: const TextStyle(
+                                            fontSize: 40,
+                                            fontWeight : FontWeight.bold,
+                                        ),
                                     ),
-                                ),
-                              );}).toList(),
-                            onChanged: (String? name) {
-                                selectChild(name!);
-                              }
+                                  );}).toList(),
+                                onChanged: (String? name) {
+                                    selectChild(name!);
+                                  }
+                            ),
+                            OutlinedButton(
+                                onPressed: () { },
+                                child: const Text('Check upcoming appointment')
+                            )
+                          ],
                         ),
-                        OutlinedButton(
-                            onPressed: () { },
-                            child: const Text('Check upcoming appointment')
-                        )
-                      ],
-                    ),
-                  )
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: const [
+                      BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program",),
+                      BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History",),
+                      BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor",),
+                    ],
+                  ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program",),
-                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History",),
-                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor",),
-                ],
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(30))
               ),
-              SingleChildScrollView(
+              child: SingleChildScrollView(
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 400,
+                        height: 460,
                         child: Container(
                           //color: Colors.grey[100],
                           child: GridView.builder(
                               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 3
+                                  crossAxisCount: 3
                               ),
                               itemCount: child.vaccines.length,
                               itemBuilder: (context, index) {
@@ -105,8 +115,8 @@ class _DuckHomeState extends State<DuckHome> {
                       )
                     ],
                   )),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
