@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../screens/vaccine_screen.dart';
 
 var statusColors = {
-  VaccineStatus.done: [Colors.lightGreen, Colors.yellowAccent.shade200],
+  VaccineStatus.done: [Colors.lightGreen.shade300, Colors.lightGreen.shade200],
   VaccineStatus.todo: [Colors.red.shade300, Colors.red.shade200],
   VaccineStatus.later: [Colors.grey.shade300, Colors.grey.shade200],
 };
@@ -38,7 +38,7 @@ class _VaccineCardState extends State<VaccineCard> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.all(5),
+              padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       colors: statusColors[widget.vaccine.vaccineStatus]!),
