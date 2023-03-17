@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/child.dart';
 import '../elements/child_card.dart';
+import '../elements/vaccine_card.dart';
 
 class DuckHome extends StatefulWidget {
   const DuckHome({Key? key}) : super(key: key);
@@ -54,7 +55,8 @@ class _DuckHomeState extends State<DuckHome> {
                               child: Text(
                                   child.name,
                                   style: TextStyle(
-                                     fontSize: 30,
+                                      fontSize: 30,
+                                      fontWeight : FontWeight.bold,
                                   ),
                               ),
                             );}).toList(),
@@ -72,18 +74,18 @@ class _DuckHomeState extends State<DuckHome> {
               ),
               SingleChildScrollView(
                   child: Column(
-                children: [
-                  SizedBox(
-                    height: 2000,
-                    child: ListView.builder(
-                        itemCount: children.length,
-                        itemBuilder: (context, index) {
-                          final child = children[index];
-                          return ChildCard(child: child);
-                        }),
-                  )
-                ],
-              )),
+                    children: [
+                      SizedBox(
+                        height: 500,
+                        child: ListView.builder(
+                            itemCount: child.vaccines.length,
+                            itemBuilder: (context, index) {
+                              final item = child.vaccines[index];
+                              return VaccineCard(item);
+                            }),
+                      )
+                    ],
+                  )),
             ],
           ),
         ),
