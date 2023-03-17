@@ -1,4 +1,5 @@
 import 'package:duckcination/models/child.dart';
+import 'package:duckcination/ui/screens/calendar_screen.dart';
 import 'package:duckcination/ui/screens/child_screen.dart';
 import 'package:duckcination/ui/screens/home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -40,7 +41,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<Widget> tabs = [
     DuckHome(),
-    Text("12"),
+    CalendarScreen(),
     Text("34"),
   ];
   int selectedIndex=0;
