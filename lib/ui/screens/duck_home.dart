@@ -76,9 +76,9 @@ class _DuckHomeState extends State<DuckHome> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination\nProgram",),
-                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination\nProgram",),
-                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "Vaccination\nProgram",),
+                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination Program",),
+                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination Program",),
+                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "Vaccination Program",),
                 ],
               ),
               SingleChildScrollView(

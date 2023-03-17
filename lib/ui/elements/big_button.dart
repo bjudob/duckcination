@@ -26,7 +26,8 @@ class _BigButtonState extends State<BigButton> {
           child: Column(
             children: [
               Icon(widget.iconData, size: 50,),
-              Text(widget.title),
+              Text(widget.title.split(' ')[0]),
+              Text(widget.title.split(' ')[1]),
             ],
           ),
         ),
