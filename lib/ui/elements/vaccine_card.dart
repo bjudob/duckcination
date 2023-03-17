@@ -30,7 +30,7 @@ class _VaccineCardState extends State<VaccineCard> {
       onTap: () {
         Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const VaccineScreen()),
+            MaterialPageRoute(builder: (context) =>  VaccineScreen(vaccine: widget.vaccine!)),
         );
       },
       child: Container(
@@ -45,10 +45,27 @@ class _VaccineCardState extends State<VaccineCard> {
                   borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: Column(
                 children: [
-                  Image(
-                    image: AssetImage(widget.vaccine.image),
-                    width: 70,
-                    height: 70,
+                  Hero(
+                    tag: widget.vaccine.name,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>  VaccineScreen(vaccine: widget.vaccine!),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          widget.vaccine.image,
+                          fit: BoxFit.contain,
+                          width: 70,
+                          height: 70,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
