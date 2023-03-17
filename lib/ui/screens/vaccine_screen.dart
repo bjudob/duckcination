@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/vaccine.dart';
+import '../elements/show_text.dart';
 import '../elements/vaccine_card.dart';
 
 class VaccineScreen extends StatefulWidget {
@@ -16,9 +17,18 @@ class VaccineScreen extends StatefulWidget {
 
 class _VaccineScreenState extends State<VaccineScreen> {
 
+  Widget getDescriptionWidgets(){
+    List<Description> descriptions=widget.vaccine.descriptions;
+    List<Widget> list = [];
+    for(var i = 0; i < descriptions.length; i++){
+      list.add(ShowText(description: descriptions[i]));
+    }
+    return new Row(children: list);
+  }
+
   @override
   Widget build(BuildContext context) {
-    Child child=DuckProvider().getChild();
+    Child child = DuckProvider().getChild();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Duckcination'),
@@ -28,7 +38,6 @@ class _VaccineScreenState extends State<VaccineScreen> {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            Text( widget.vaccine.name),
             Hero(
               tag: widget.vaccine.name!,
               child: Material(
@@ -43,6 +52,7 @@ class _VaccineScreenState extends State<VaccineScreen> {
                 ),
               ),
             ),
+            getDescriptionWidgets(),
           ],
         )),
       ), // This trailing comma makes auto-formatting nicer for build methods.

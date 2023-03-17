@@ -4,6 +4,13 @@ enum VaccineStatus {
   later
 }
 
+class Description {
+  String title;
+  String content;
+
+  Description(this.title, this.content){}
+}
+
 class Vaccine{
   String name;
   int ageMin;
@@ -12,9 +19,10 @@ class Vaccine{
   String image;
   VaccineStatus vaccineStatus;
   bool isDone=false;
+  List<Description> descriptions;
 
 
-  Vaccine(this.name,this.ageMin,this.ageMax,this.image,this.vaccineStatus){
+  Vaccine(this.name,this.ageMin,this.ageMax,this.image,this.vaccineStatus, this.descriptions){
     ageRecommendation='$ageMin-$ageMax years old';
   }
 }
