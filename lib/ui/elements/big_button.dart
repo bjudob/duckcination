@@ -30,8 +30,8 @@ class _BigButtonState extends State<BigButton> {
           child: Column(
             children: [
               Icon(widget.iconData, size: 50, color: Colors.orange,),
-              Text(widget.title.split(' ')[0], style: TextStyle(fontWeight: FontWeight.bold),),
-              Text(widget.title.split(' ')[1], style: TextStyle(fontWeight: FontWeight.bold),),
+              Text(widget.title.split('-')[0], style: TextStyle(fontWeight: FontWeight.bold),),
+              Text(widget.title.split('-')[1], style: TextStyle(fontWeight: FontWeight.bold),),
             ],
           ),
         ),

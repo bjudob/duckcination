@@ -33,52 +33,56 @@ class _DuckHomeState extends State<DuckHome> {
   Widget build(BuildContext context) {
     children = duckProvider.getChildren();
     return Scaffold(
-      backgroundColor: Colors.orange.shade200,
+      backgroundColor: Colors.orange.shade100,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 100, 10, 0),
+          padding: const EdgeInsets.fromLTRB(10, 80, 10, 0),
           child: Column(
             children: [
               Row(
                 children: [
                   Image.asset(
-                    'img/boy.png',
+                    child.image,
                     height: 100,
                     width: 100,
                   ),
-                  Column(
-                    children: [
-                      DropdownButton(
-                        value: child.name,
-                        items: children.map<DropdownMenuItem<String>>((Child child) {
-                            return DropdownMenuItem<String>(
-                              value: child.name,
-                              child: Text(
-                                  child.name,
-                                  style: const TextStyle(
-                                      fontSize: 30,
-                                      fontWeight : FontWeight.bold,
-                                  ),
-                              ),
-                            );}).toList(),
-                          onChanged: (String? name) {
-                              selectChild(name!);
-                            }
-                      ),
-                      OutlinedButton(
-                          onPressed: () { },
-                          child: const Text('Check upcoming appointment')
-                      )
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DropdownButton(
+                          value: child.name,
+                          items: children.map<DropdownMenuItem<String>>((Child child) {
+                              return DropdownMenuItem<String>(
+                                value: child.name,
+                                child: Text(
+                                    child.name,
+                                    style: const TextStyle(
+                                        fontSize: 40,
+                                        fontWeight : FontWeight.bold,
+                                    ),
+                                ),
+                              );}).toList(),
+                            onChanged: (String? name) {
+                                selectChild(name!);
+                              }
+                        ),
+                        OutlinedButton(
+                            onPressed: () { },
+                            child: const Text('Check upcoming appointment')
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination Program",),
-                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination Program",),
-                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "Vaccination Program",),
+                  BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program",),
+                  BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History",),
+                  BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor",),
                 ],
               ),
               SingleChildScrollView(
