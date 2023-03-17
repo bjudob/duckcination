@@ -11,7 +11,7 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
-Color? primaryColor = Colors.amber[300];
+Color? primaryColor = Colors.red[200];
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today_rounded, color: Colors.orange,), label: "Calendar"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person, color: Colors.orange,), label: "Call"),
+              icon: Icon(Icons.person, color: Colors.orange,), label: "Profile"),
         ],
         currentIndex: selectedIndex,
         fixedColor: Colors.deepPurple,

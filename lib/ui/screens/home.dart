@@ -32,7 +32,7 @@ class _DuckHomeState extends State<DuckHome> {
   Widget build(BuildContext context) {
     children = duckProvider.getChildren();
     return Scaffold(
-      backgroundColor: Colors.amberAccent.shade100,
+      backgroundColor: Colors.orange.shade200,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
