@@ -1,4 +1,5 @@
 import 'package:duckcination/provider/duck_provider.dart';
+import 'package:duckcination/ui/elements/big_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _DuckHomeState extends State<DuckHome> {
       backgroundColor: Colors.orange.shade200,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
+          padding: const EdgeInsets.fromLTRB(10, 100, 10, 0),
           child: Column(
             children: [
               Row(
@@ -72,20 +73,31 @@ class _DuckHomeState extends State<DuckHome> {
                   )
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  BigButton(),
+                  BigButton(),
+                  BigButton(),
+                ],
+              ),
               SingleChildScrollView(
                   child: Column(
                     children: [
                       SizedBox(
                         height: 400,
-                        child: GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3
-                            ),
-                            itemCount: child.vaccines.length,
-                            itemBuilder: (context, index) {
-                              final item = child.vaccines[index];
-                              return VaccineCard(item);
-                            }),
+                        child: Container(
+                          color: Colors.grey[100],
+                          child: GridView.builder(
+                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3
+                              ),
+                              itemCount: child.vaccines.length,
+                              itemBuilder: (context, index) {
+                                final item = child.vaccines[index];
+                                return VaccineCard(item);
+                              }),
+                        ),
                       )
                     ],
                   )),
