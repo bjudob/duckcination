@@ -21,7 +21,10 @@ class Child{
   Child(this.name,this.birthDate, this.gender, this.age){
     vaccines=[
       Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.todo, [
-        Description("Key vaccine facts", hepatitis_key_facts)
+        Description("Key vaccine facts", hepatitis_key_facts),
+        Description("Who should have the vaccine", hepatitis_key_facts),
+        Description("Safety and side effects", hepatitis_key_facts),
+        Description("Ingredients", hepatitis_key_facts),
       ]),
       Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)

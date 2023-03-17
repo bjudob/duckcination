@@ -23,7 +23,7 @@ class _VaccineScreenState extends State<VaccineScreen> {
     for(var i = 0; i < descriptions.length; i++){
       list.add(ShowText(description: descriptions[i]));
     }
-    return new Row(children: list);
+    return Row(children: list);
   }
 
   @override
