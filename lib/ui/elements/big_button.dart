@@ -17,17 +17,21 @@ class _BigButtonState extends State<BigButton> {
       padding: const EdgeInsets.fromLTRB(0,20,0,0),
       child: Container(
         padding: const EdgeInsets.all(5),
-        decoration: BoxDecoration(
+        /*decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: [Colors.grey[100]!,Colors.grey[400]!]),
-            borderRadius: const BorderRadius.all(Radius.circular(20))),
+            borderRadius: const BorderRadius.all(Radius.circular(20))),*/
+        decoration: const BoxDecoration(
+          color: Colors.white,
+            borderRadius: BorderRadius.all(Radius.circular(20))
+        ),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20,20,20,20),
           child: Column(
             children: [
-              Icon(widget.iconData, size: 50,),
-              Text(widget.title.split(' ')[0]),
-              Text(widget.title.split(' ')[1]),
+              Icon(widget.iconData, size: 50, color: Colors.orange,),
+              Text(widget.title.split(' ')[0], style: TextStyle(fontWeight: FontWeight.bold),),
+              Text(widget.title.split(' ')[1], style: TextStyle(fontWeight: FontWeight.bold),),
             ],
           ),
         ),
