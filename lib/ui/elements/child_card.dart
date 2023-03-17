@@ -1,4 +1,4 @@
-import 'package:duckcination/ui/screens/child_screen.dart';
+import 'package:duckcination/ui/screens/vaccine_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

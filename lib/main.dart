@@ -1,7 +1,7 @@
 import 'package:duckcination/models/child.dart';
 import 'package:duckcination/ui/screens/calendar_screen.dart';
-import 'package:duckcination/ui/screens/child_screen.dart';
-import 'package:duckcination/ui/screens/home.dart';
+import 'package:duckcination/ui/screens/vaccine_screen.dart';
+import 'package:duckcination/ui/screens/duck_home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
