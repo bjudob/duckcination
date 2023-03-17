@@ -2,6 +2,7 @@ import 'package:duckcination/models/child.dart';
 import 'package:duckcination/provider/duck_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../../models/vaccine.dart';
 import '../elements/vaccine_card.dart';
@@ -15,21 +16,29 @@ class VaccineScreen extends StatefulWidget {
 }
 
 class _VaccineScreenState extends State<VaccineScreen> {
+  final YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'usZHnat_nYA',
+    flags: const YoutubePlayerFlags(
+      autoPlay: true,
+      mute: false,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
-    Child child=DuckProvider().getChild();
+    Child child = DuckProvider().getChild();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Duckcination'),
       ),
       backgroundColor: Colors.orange.shade200,
-      body: Center(
-        child: SingleChildScrollView(
-            child: Column(
-          children: [
-            Text( widget.vaccine.name),
-            Hero(
+      body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Hero(
               tag: widget.vaccine.name!,
               child: Material(
                 color: Colors.transparent,
@@ -37,15 +46,30 @@ class _VaccineScreenState extends State<VaccineScreen> {
                   child: Image.asset(
                     widget.vaccine.image!,
                     fit: BoxFit.contain,
-                    width: 300,
-                    height: 300,
+                    width: 100,
+                    height: 100,
                   ),
                 ),
               ),
             ),
-          ],
-        )),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          ),
+          YoutubePlayerBuilder(
+            player: YoutubePlayer(
+              controller: _controller,
+              showVideoProgressIndicator: true,
+              progressIndicatorColor: Colors.amber,
+              progressColors: ProgressBarColors(
+                playedColor: Colors.amber,
+                handleColor: Colors.amberAccent,
+              ),
+              onReady: () {
+                _controller.addListener(() {});
+              },
+            ),
+            builder: (context, player) => player,
+          ),
+        ],
+      )), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
