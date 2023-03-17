@@ -26,40 +26,39 @@ class _VaccineCardState extends State<VaccineCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: statusColors[widget.vaccine.vaccineStatus]!),
-            borderRadius: const BorderRadius.all(Radius.circular(20))),
-        child: Row(
-          children: [
-            Image(
-              image: AssetImage(widget.vaccine.image),
-              width: 100,
-              height: 100,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: statusColors[widget.vaccine.vaccineStatus]!),
+                borderRadius: const BorderRadius.all(Radius.circular(20))),
+            child: Column(
+              children: [
+                Image(
+                  image: AssetImage(widget.vaccine.image),
+                  width: 70,
+                  height: 70,
+                ),
+              ],
             ),
-            Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    widget.vaccine.name,
-                    style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    widget.vaccine.ageRecommendation,
-                    style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                Text(
+                  widget.vaccine.name,
+                  style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  widget.vaccine.ageRecommendation,
+                  style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-            Checkbox(
-                value: widget.vaccine.vaccineStatus == VaccineStatus.done,
-                onChanged: (checked) {
-                  changeName();
-                })
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

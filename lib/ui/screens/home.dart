@@ -54,7 +54,7 @@ class _DuckHomeState extends State<DuckHome> {
                               value: child.name,
                               child: Text(
                                   child.name,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 30,
                                       fontWeight : FontWeight.bold,
                                   ),
@@ -66,7 +66,7 @@ class _DuckHomeState extends State<DuckHome> {
                       ),
                       OutlinedButton(
                           onPressed: () { },
-                          child: Text('Check upcoming appointment')
+                          child: const Text('Check upcoming appointment')
                       )
                     ],
                   )
