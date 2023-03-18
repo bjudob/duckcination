@@ -124,7 +124,7 @@ class _DuckHomeState extends State<DuckHome> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(10, 15,0,0),
+                        padding: EdgeInsets.fromLTRB(10, 35,0,0),
                         child: Text("Mandatory Vaccines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                       ),
                       SizedBox(
