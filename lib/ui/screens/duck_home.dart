@@ -120,9 +120,14 @@ class _DuckHomeState extends State<DuckHome> {
                     borderRadius: BorderRadius.all(Radius.circular(40))),
                 child: SingleChildScrollView(
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 15,0,0),
+                      child: Text("Mandatory vaccines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    ),
                     SizedBox(
-                      height: 460,
+                      height: 400,
                       child: Container(
                         //color: Colors.grey[100],
                         child: GridView.count(
