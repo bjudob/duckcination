@@ -160,7 +160,7 @@ class _DuckHomeState extends State<DuckHome> {
                           controller: ScrollController(keepScrollOffset: false),
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          children: child.vaccines.map((Vaccine vaccine) {
+                          children: child.r_vaccines.map((Vaccine vaccine) {
                             return Container(
                               height: 200.0,
                               child: Center(

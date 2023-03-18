@@ -85,6 +85,8 @@ flutter:
    - img/baci1.png
    - img/baci2.png
    - img/baci3.png
+   - img/agy.png
+   - img/bel.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

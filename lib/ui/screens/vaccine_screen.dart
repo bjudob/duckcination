@@ -98,6 +98,7 @@ class _VaccineScreenState extends State<VaccineScreen> {
                 ],
               ),
               getDescriptionWidgets(),
+              SizedBox(height: 110,)
             ],
           ),
         )),

@@ -33,17 +33,17 @@ class Child{
     vaccines=[
       Vaccine('HepB', 0,1,'img/liver.png',VaccineStatus.done, descriptions),
       Vaccine('BCG', 2,3,'img/lung.png',VaccineStatus.done, descriptions),
-      Vaccine('Hexavalent', 7,8,'img/penta.png',VaccineStatus.todo, descriptions),
-      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.done, descriptions),
+      Vaccine('Hexavalent', 7,8,'img/penta.png',VaccineStatus.done, descriptions),
+      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.todo, descriptions),
       Vaccine('Pneumococcal', 11,12,'img/ful.png',VaccineStatus.todo, descriptions),
       Vaccine('DTPa-VPI', 2,3,'img/baci3.png',VaccineStatus.todo, descriptions),
       Vaccine('dTpa', 7,8,'img/baci1.png',VaccineStatus.todo, descriptions),
     ];
     r_vaccines=[
-      Vaccine('HepB', 0,1,'img/liver.png',VaccineStatus.done, descriptions),
-      Vaccine('BCG', 2,3,'img/lung.png',VaccineStatus.done, descriptions),
-      Vaccine('Hexavalent', 7,8,'img/penta.png',VaccineStatus.todo, descriptions),
-      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.done, descriptions),
+      Vaccine('Rotavirus', 0,1,'img/bel.png',VaccineStatus.todo, descriptions),
+      Vaccine('Chickenpox', 2,3,'img/himlo.png',VaccineStatus.todo, descriptions),
+      Vaccine('Meningo', 7,8,'img/agy.png',VaccineStatus.todo, descriptions),
+      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.todo, descriptions),
       Vaccine('Pneumococcal', 11,12,'img/ful.png',VaccineStatus.todo, descriptions),
       Vaccine('DTPa-VPI', 2,3,'img/baci3.png',VaccineStatus.todo, descriptions),
       Vaccine('dTpa', 7,8,'img/baci1.png',VaccineStatus.todo, descriptions),
