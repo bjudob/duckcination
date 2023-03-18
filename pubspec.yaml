@@ -75,6 +75,7 @@ flutter:
    - img/liver.png
    - img/lung.png
    - img/penta.png
+   - img/graph.mp4
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

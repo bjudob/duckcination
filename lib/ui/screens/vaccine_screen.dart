@@ -86,7 +86,7 @@ class _VaccineScreenState extends State<VaccineScreen> {
                   Countup(
                     begin: 0,
                     end: 1260000,
-                    duration: Duration(seconds: 3),
+                    duration: Duration(seconds: 2),
                     separator: ',',
                     style: TextStyle(
                       fontSize: 36,
