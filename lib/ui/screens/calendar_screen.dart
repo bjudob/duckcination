@@ -22,9 +22,23 @@ class _CalendarScreenState extends State<CalendarScreen> {
             focusedDay: DateTime.now(),
           ),
         ),
-        SingleChildScrollView(
-            child: Column(children: [Image.asset('img/schedule.png')])
-        ),
+        Center(
+          child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 400,
+                    child: ListView.builder(
+                        itemCount: 1,
+                        itemBuilder: (context, index) {
+                          return Container(
+                            child: Image.asset('img/schedule.png'),
+                          );
+                        }),
+                  )
+                ],
+              )),
+        ), // This trailing comma ma
       ],
     );
   }
