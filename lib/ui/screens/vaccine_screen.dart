@@ -74,10 +74,11 @@ class _VaccineScreenState extends State<VaccineScreen> {
               Column(
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
-                      Icon(Icons.train),
+                      Icon(Icons.trending_up),
                       Text(
-                        "Deaths without Vaccine",
+                        "Lives saved/year",
                         style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -91,23 +92,8 @@ class _VaccineScreenState extends State<VaccineScreen> {
                       fontSize: 36,
                     ),
                   ),
-                  Row(
-                    children: [
-                      Icon(Icons.trending_down),
-                      Text(
-                        "Deaths from Vaccine",
-                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                  Countup(
-                    begin: 0,
-                    end: 27,
-                    duration: Duration(seconds: 3),
-                    separator: ',',
-                    style: TextStyle(
-                      fontSize: 36,
-                    ),
+                  const SizedBox(
+                    height: 80,
                   ),
                 ],
               ),
