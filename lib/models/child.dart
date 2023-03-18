@@ -43,10 +43,9 @@ class Child{
       Vaccine('Rotavirus', 0,1,'img/bel.png',VaccineStatus.todo, descriptions),
       Vaccine('Chickenpox', 2,3,'img/himlo.png',VaccineStatus.todo, descriptions),
       Vaccine('Meningo', 7,8,'img/agy.png',VaccineStatus.todo, descriptions),
-      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.todo, descriptions),
-      Vaccine('Pneumococcal', 11,12,'img/ful.png',VaccineStatus.todo, descriptions),
-      Vaccine('DTPa-VPI', 2,3,'img/baci3.png',VaccineStatus.todo, descriptions),
-      Vaccine('dTpa', 7,8,'img/baci1.png',VaccineStatus.todo, descriptions),
+      Vaccine('HepA', 11,12,'img/maj.png',VaccineStatus.todo, descriptions),
+      Vaccine('Influenza', 11,12,'img/orr.png',VaccineStatus.todo, descriptions),
+      Vaccine('HPV', 2,3,'img/pina.png',VaccineStatus.todo, descriptions),
     ];
   }
 }
