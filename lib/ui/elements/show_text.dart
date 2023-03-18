@@ -39,7 +39,7 @@ class _ShowTextState extends State<ShowText> {
           const Divider(
             color: Colors.red,
           ),
-          Visibility(visible: visible, child: Text(widget.description.content))
+          Visibility(visible: visible, child: Container(child: Text(widget.description.content)))
         ],
       )),
     );
