@@ -34,11 +34,11 @@ class _VaccineCardState extends State<VaccineCard> {
         );
       },
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(2),
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.all(14),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       colors: statusColors[widget.vaccine.vaccineStatus]!),
@@ -61,8 +61,8 @@ class _VaccineCardState extends State<VaccineCard> {
                         child: Image.asset(
                           widget.vaccine.image,
                           fit: BoxFit.contain,
-                          width: 50,
-                          height: 50,
+                          width: 70,
+                          height: 70,
                         ),
                       ),
                     ),
@@ -77,7 +77,7 @@ class _VaccineCardState extends State<VaccineCard> {
                   children: [
                     Text(
                       widget.vaccine.name,
-                      style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
                     ),
                    /* Text(
                       widget.vaccine.ageRecommendation,

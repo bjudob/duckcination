@@ -1,3 +1,4 @@
+import 'package:duckcination/models/vaccine.dart';
 import 'package:duckcination/provider/duck_provider.dart';
 import 'package:duckcination/ui/elements/big_button.dart';
 import 'package:duckcination/ui/screens/history_screen.dart';
@@ -122,15 +123,21 @@ class _DuckHomeState extends State<DuckHome> {
                       height: 460,
                       child: Container(
                         //color: Colors.grey[100],
-                        child: GridView.builder(
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 4),
-                            itemCount: child.vaccines.length,
-                            itemBuilder: (context, index) {
-                              final item = child.vaccines[index];
-                              return VaccineCard(item);
-                            }),
+                        child: GridView.count(
+                            childAspectRatio: 0.8,
+                            crossAxisCount: 4,
+                            controller: ScrollController(keepScrollOffset: false),
+                            shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          children: child.vaccines.map((Vaccine vaccine) {
+                            return Container(
+                              height: 250.0,
+                              child: Center(
+                                child: VaccineCard(vaccine)
+                              ),
+                            );
+                          }).toList(),
+                        ),
                       ),
                     )
                   ],
