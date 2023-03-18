@@ -43,7 +43,7 @@ class _BigButtonState extends State<BigButton> {
         }
       },
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(0,20,0,0),
+        padding: const EdgeInsets.fromLTRB(5,20,5,0),
         child: Container(
           padding: const EdgeInsets.all(5),
           /*decoration: BoxDecoration(
@@ -55,7 +55,7 @@ class _BigButtonState extends State<BigButton> {
               borderRadius: BorderRadius.all(Radius.circular(20))
           ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15,15,15,15),
+            padding: const EdgeInsets.fromLTRB(10,10,10,10),
             child: Column(
               children: getContent(),
             ),
