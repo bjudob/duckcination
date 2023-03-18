@@ -22,8 +22,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Duckcination',
       theme: ThemeData(
+        primaryColor: Colors.orange[50],
+        fontFamily: 'Georgia',
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.amber,
+          primarySwatch: Colors.orange,
         ),
       ),
       home: const MyHomePage(),
