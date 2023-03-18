@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HistoryCard extends StatelessWidget {
-  const HistoryCard({Key? key}) : super(key: key);
+  const HistoryCard({Key? key, required this.date, required this.vaccine, required this.notes}) : super(key: key);
+  final String date;
+  final String vaccine;
+  final String notes;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +22,11 @@ class HistoryCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom:10),
               child: Row(
-                children: const [
-                  Icon(Icons.calendar_today_outlined),
+                children: [
+                  const Icon(Icons.calendar_today_outlined),
                   Padding(
                     padding: EdgeInsets.only(left: 10),
-                    child: Text("2022. 11. 07", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    child: Text(date, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                   )
                 ],
               ),
@@ -31,9 +34,9 @@ class HistoryCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom:10),
               child: Row(
-                children: const [
-                  Text("Vaccine:  ", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  Text("Hepatitis B - 1", style: TextStyle(fontSize: 20,)),
+                children: [
+                  const Text("Vaccine:  ", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  Text(vaccine, style: TextStyle(fontSize: 20,)),
                 ],
               ),
             ),
@@ -41,9 +44,9 @@ class HistoryCard extends StatelessWidget {
               padding: const EdgeInsets.only(bottom:10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text("Notes", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  Text("My dear kid had severe side effects.\nSo so sad, he nearly died.\nAnti vaxers forever!!", style: TextStyle(fontSize: 20,)),
+                children: [
+                  const Text("Notes", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  Text(notes, style: TextStyle(fontSize: 20,)),
                 ],
               ),
             )
