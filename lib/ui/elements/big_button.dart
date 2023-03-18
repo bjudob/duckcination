@@ -1,12 +1,14 @@
+import 'package:duckcination/functions/call.dart';
 import 'package:duckcination/ui/screens/history_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BigButton extends StatefulWidget {
-  const BigButton({Key? key, required this.iconData, required this.title, required this.target_screen}) : super(key: key);
+  const BigButton({Key? key, required this.iconData, required this.title, required this.target_screen, required this.option}) : super(key: key);
   final IconData iconData;
   final String title;
   final Widget target_screen;
+  final String option;
 
   @override
   State<BigButton> createState() => _BigButtonState();
@@ -17,10 +19,14 @@ class _BigButtonState extends State<BigButton> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) =>  widget.target_screen),
-        );
+        if(widget.option=="call"){
+          whoCalledTheDoctor();
+        }else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => widget.target_screen),
+          );
+        }
       },
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0,20,0,0),

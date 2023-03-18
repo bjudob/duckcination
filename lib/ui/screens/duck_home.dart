@@ -83,9 +83,9 @@ class _DuckHomeState extends State<DuckHome> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: const [
-                      BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program", target_screen: HistoryScreen(),),
-                      BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History", target_screen: HistoryScreen(),),
-                      BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor", target_screen: HistoryScreen(),),
+                      BigButton(iconData: Icons.child_care_sharp, title: "Vaccination-Program", target_screen: HistoryScreen(), option: ''),
+                      BigButton(iconData: Icons.calendar_today_outlined,title: "Vaccination-History", target_screen: HistoryScreen(), option: '',),
+                      BigButton(iconData: Icons.perm_phone_msg_outlined,title: "    Call the    -Doctor", target_screen: HistoryScreen(), option: 'call',),
                     ],
                   ),
                 ],
