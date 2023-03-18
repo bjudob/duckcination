@@ -15,13 +15,27 @@ class BigButton extends StatefulWidget {
 }
 
 class _BigButtonState extends State<BigButton> {
+  List<Widget> getContent(){
+    if (widget.option=='days'){
+      return [
+        Text('14', style: const TextStyle(fontSize:44,fontWeight: FontWeight.bold, color: Colors.orange),),
+        Text(widget.title.split('-')[0], style: const TextStyle(fontWeight: FontWeight.bold),),
+        Text(widget.title.split('-')[1], style: const TextStyle(fontWeight: FontWeight.bold),),
+      ];
+    }
+    return [
+      Icon(widget.iconData, size: 50, color: Colors.orange,),
+      Text(widget.title.split('-')[0], style: const TextStyle(fontWeight: FontWeight.bold),),
+      Text(widget.title.split('-')[1], style: const TextStyle(fontWeight: FontWeight.bold),),
+    ];
+  }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         if(widget.option=="call"){
           whoCalledTheDoctor();
-        }else {
+        }else if(widget.option=="history"){
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => widget.target_screen),
@@ -43,11 +57,7 @@ class _BigButtonState extends State<BigButton> {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(15,15,15,15),
             child: Column(
-              children: [
-                Icon(widget.iconData, size: 50, color: Colors.orange,),
-                Text(widget.title.split('-')[0], style: const TextStyle(fontWeight: FontWeight.bold),),
-                Text(widget.title.split('-')[1], style: const TextStyle(fontWeight: FontWeight.bold),),
-              ],
+              children: getContent(),
             ),
           ),
         ),

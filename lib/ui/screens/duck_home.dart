@@ -94,14 +94,14 @@ class _DuckHomeState extends State<DuckHome> {
                       children: const [
                         BigButton(
                             iconData: Icons.child_care_sharp,
-                            title: "Vaccination-Program",
+                            title: "Days until-Next Vaccine",
                             target_screen: HistoryScreen(),
-                            option: ''),
+                            option: 'days'),
                         BigButton(
                           iconData: Icons.calendar_today_outlined,
                           title: "Vaccination-History",
                           target_screen: HistoryScreen(),
-                          option: '',
+                          option: 'history',
                         ),
                         BigButton(
                           iconData: Icons.perm_phone_msg_outlined,
