@@ -77,12 +77,12 @@ class _VaccineCardState extends State<VaccineCard> {
                   children: [
                     Text(
                       widget.vaccine.name,
-                      style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
                     ),
-                   /* Text(
-                      widget.vaccine.ageRecommendation,
-                      style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
-                    ),*/
+                    Text(
+                      "Vaccine",
+                      style: const TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
+                    ),
                   ],
                 ),
               ),

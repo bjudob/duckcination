@@ -33,19 +33,19 @@ class Child{
       Vaccine('BCG', 2,3,'img/lung.png',VaccineStatus.done, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('Hexa', 7,8,'img/penta.png',VaccineStatus.todo, [
+      Vaccine('Hexavalent', 7,8,'img/penta.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.todo, [
+      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.done, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('Pneumo', 11,12,'img/influenza.png',VaccineStatus.todo, [
+      Vaccine('Pneumococcal', 11,12,'img/ful.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('DTP-VPI', 2,3,'img/hepatitis_b.png',VaccineStatus.todo, [
+      Vaccine('DTPa-VPI', 2,3,'img/baci3.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('dTpa', 7,8,'img/rotavirus.png',VaccineStatus.todo, [
+      Vaccine('dTpa', 7,8,'img/baci1.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
     ];

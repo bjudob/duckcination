@@ -77,6 +77,14 @@ flutter:
    - img/penta.png
    - img/graph.mp4
    - img/schedule.png
+   - img/ful.png
+   - img/himlo.png
+   - img/maj.png
+   - img/orr.png
+   - img/pina.png
+   - img/baci1.png
+   - img/baci2.png
+   - img/baci3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
