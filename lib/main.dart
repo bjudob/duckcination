@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Duckcination',
       theme: ThemeData(
         primaryColor: Colors.orange[50],
-        fontFamily: 'Georgia',
+        fontFamily: 'Inter',
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.orange,
         ),
