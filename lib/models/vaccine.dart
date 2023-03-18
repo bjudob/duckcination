@@ -23,6 +23,6 @@ class Vaccine{
 
 
   Vaccine(this.name,this.ageMin,this.ageMax,this.image,this.vaccineStatus, this.descriptions){
-    ageRecommendation='$ageMin-$ageMax years old';
+    ageRecommendation='$ageMin-$ageMax years';
   }
 }

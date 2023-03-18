@@ -61,8 +61,8 @@ class _VaccineCardState extends State<VaccineCard> {
                         child: Image.asset(
                           widget.vaccine.image,
                           fit: BoxFit.contain,
-                          width: 60,
-                          height: 60,
+                          width: 50,
+                          height: 50,
                         ),
                       ),
                     ),
@@ -71,17 +71,20 @@ class _VaccineCardState extends State<VaccineCard> {
               ),
             ),
             Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    widget.vaccine.name,
-                    style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    widget.vaccine.ageRecommendation,
-                    style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
-                  ),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0,0,0,0),
+                child: Column(
+                  children: [
+                    Text(
+                      widget.vaccine.name,
+                      style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
+                    ),
+                   /* Text(
+                      widget.vaccine.ageRecommendation,
+                      style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),
+                    ),*/
+                  ],
+                ),
               ),
             ),
           ],

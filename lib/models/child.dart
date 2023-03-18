@@ -24,19 +24,19 @@ class Child{
       image='img/girl.png';
     }
     vaccines=[
-      Vaccine('Hepatitis B - 1', 0,1,'img/hepatitis_b.png',VaccineStatus.done, [
+      Vaccine('HepB', 0,1,'img/liver.png',VaccineStatus.done, [
         Description("Key vaccine facts", hepatitis_key_facts),
         Description("Who should have the vaccine", hepatitis_key_facts),
         Description("Safety and side effects", hepatitis_key_facts),
         Description("Ingredients", hepatitis_key_facts),
       ]),
-      Vaccine('Hepatitis B - 2', 2,3,'img/hepatitis_b.png',VaccineStatus.done, [
+      Vaccine('BCG', 2,3,'img/lung.png',VaccineStatus.done, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('Rotavirus', 7,8,'img/rotavirus.png',VaccineStatus.todo, [
+      Vaccine('Hexa', 7,8,'img/penta.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
-      Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.todo, [
+      Vaccine('ROR', 11,12,'img/hand.png',VaccineStatus.todo, [
         Description("Key vaccine facts", hepatitis_key_facts)
       ]),
       Vaccine('Influenza', 11,12,'img/influenza.png',VaccineStatus.todo, [

@@ -125,7 +125,7 @@ class _DuckHomeState extends State<DuckHome> {
                         child: GridView.builder(
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3),
+                                    crossAxisCount: 4),
                             itemCount: child.vaccines.length,
                             itemBuilder: (context, index) {
                               final item = child.vaccines[index];

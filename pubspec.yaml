@@ -68,6 +68,10 @@ flutter:
    - img/influenza.png
    - img/boy.png
    - img/girl.png
+   - img/hand.png
+   - img/liver.png
+   - img/lung.png
+   - img/penta.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
