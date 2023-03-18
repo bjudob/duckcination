@@ -71,14 +71,45 @@ class _VaccineScreenState extends State<VaccineScreen> {
               const SizedBox(
                 height: 50,
               ),
-              Countup(
-                begin: 0,
-                end: 1260000,
-                duration: Duration(seconds: 3),
-                separator: ',',
-                style: TextStyle(
-                  fontSize: 36,
-                ),
+              Column(
+                children: [
+                  Row(
+                    children: const [
+                      Icon(Icons.train),
+                      Text(
+                        "Deaths without Vaccine",
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Countup(
+                    begin: 0,
+                    end: 1260000,
+                    duration: Duration(seconds: 3),
+                    separator: ',',
+                    style: TextStyle(
+                      fontSize: 36,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.trending_down),
+                      Text(
+                        "Deaths from Vaccine",
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  Countup(
+                    begin: 0,
+                    end: 27,
+                    duration: Duration(seconds: 3),
+                    separator: ',',
+                    style: TextStyle(
+                      fontSize: 36,
+                    ),
+                  ),
+                ],
               ),
               getDescriptionWidgets(),
             ],
