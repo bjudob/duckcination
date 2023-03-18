@@ -1,5 +1,6 @@
 import 'package:duckcination/models/child.dart';
 import 'package:duckcination/provider/duck_provider.dart';
+import 'package:duckcination/ui/elements/video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -55,6 +56,7 @@ class _VaccineScreenState extends State<VaccineScreen> {
                   ),
                 ),
               ),
+              const VideoDuck(),
               getDescriptionWidgets(),
           ],
         ),
