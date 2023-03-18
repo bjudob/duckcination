@@ -35,11 +35,13 @@ class _DuckHomeState extends State<DuckHome> {
   Widget build(BuildContext context) {
     children = duckProvider.getChildren();
     return Scaffold(
-      backgroundColor: Colors.orange.shade200,
       body: Container(
         decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Color.fromRGBO(255, 254, 254, 100),Color.fromRGBO(255, 247, 234, 100)]),
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                //colors: [Color.fromRGBO(255, 254, 254, 100),Color.fromRGBO(255, 240, 220, 100)]),
+                colors: [Color.fromRGBO(253, 200, 150, 100),Color.fromRGBO(255, 240, 220, 100)]),
             borderRadius: BorderRadius.all(Radius.circular(20))),
         child: Center(
           child: Column(
@@ -114,8 +116,8 @@ class _DuckHomeState extends State<DuckHome> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.orange.shade50,
-                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                    color: Color.fromRGBO(252, 252, 252, 100),
+                    borderRadius: BorderRadius.all(Radius.circular(40))),
                 child: SingleChildScrollView(
                     child: Column(
                   children: [

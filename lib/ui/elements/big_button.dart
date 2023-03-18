@@ -37,7 +37,7 @@ class _BigButtonState extends State<BigButton> {
                   colors: [Colors.grey[100]!,Colors.grey[400]!]),
               borderRadius: const BorderRadius.all(Radius.circular(20))),*/
           decoration: BoxDecoration(
-            color: Colors.orange.shade50,
+            color: Color.fromRGBO(252, 252, 252, 100),
               borderRadius: BorderRadius.all(Radius.circular(20))
           ),
           child: Padding(

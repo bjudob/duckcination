@@ -59,7 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // return ChildScreen(child: Child('Jennyfer', DateTime(2018,9,26)));
     return Scaffold(
-      backgroundColor: ,
       body: tabs[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -72,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         currentIndex: selectedIndex,
         fixedColor: Colors.black,
-        backgroundColor: Colors.orange[50],
+        backgroundColor: Colors.orange[30],
         onTap: onItemTapped,
         selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
       ),
