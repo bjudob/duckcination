@@ -1,3 +1,4 @@
+import 'package:countup/countup.dart';
 import 'package:duckcination/models/child.dart';
 import 'package:duckcination/provider/duck_provider.dart';
 import 'package:duckcination/ui/elements/video_player.dart';
@@ -67,6 +68,18 @@ class _VaccineScreenState extends State<VaccineScreen> {
                 ]),
               ),
               const VideoDuck(),
+              const SizedBox(
+                height: 50,
+              ),
+              Countup(
+                begin: 0,
+                end: 1260000,
+                duration: Duration(seconds: 3),
+                separator: ',',
+                style: TextStyle(
+                  fontSize: 36,
+                ),
+              ),
               getDescriptionWidgets(),
             ],
           ),
