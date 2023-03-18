@@ -24,6 +24,7 @@ class _VideoDuckState extends State<VideoDuck> {
 
   @override
   Widget build(BuildContext context) {
+    _controller.play();
     return Center(
       child: _controller.value.isInitialized
           ? AspectRatio(

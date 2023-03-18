@@ -29,12 +29,16 @@ class _VaccineScreenState extends State<VaccineScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Duckcination'),
-      ),
-      backgroundColor: Colors.orange.shade200,
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 20, 20, 10),
+      body: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                //colors: [Color.fromRGBO(255, 254, 254, 100),Color.fromRGBO(255, 240, 220, 100)]),
+                colors: [Color.fromRGBO(253, 200, 150, 100),Color.fromRGBO(255, 240, 220, 100)]),
+            borderRadius: BorderRadius.all(Radius.circular(20))),
+        child:Padding(
+        padding: const EdgeInsets.fromLTRB(20.0, 50, 20, 10),
         child: SingleChildScrollView(
             child: Expanded(
           child: Column(
@@ -67,7 +71,8 @@ class _VaccineScreenState extends State<VaccineScreen> {
             ],
           ),
         )),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+    ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
