@@ -1,5 +1,6 @@
 import 'package:duckcination/models/child.dart';
 import 'package:duckcination/ui/screens/calendar_screen.dart';
+import 'package:duckcination/ui/screens/settings_screen.dart';
 import 'package:duckcination/ui/screens/vaccine_screen.dart';
 import 'package:duckcination/ui/screens/duck_home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> tabs = [
     DuckHome(),
     CalendarScreen(),
-    Text("34"),
+    SettingsScreen(),
   ];
   int selectedIndex=0;
 
@@ -58,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // return ChildScreen(child: Child('Jennyfer', DateTime(2018,9,26)));
     return Scaffold(
+      backgroundColor: ,
       body: tabs[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
