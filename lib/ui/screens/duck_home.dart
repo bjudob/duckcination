@@ -115,19 +115,19 @@ class _DuckHomeState extends State<DuckHome> {
                 ),
               ),
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color.fromRGBO(252, 252, 252, 100),
                     borderRadius: BorderRadius.all(Radius.circular(40))),
                 child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 15,0,0),
-                      child: Text("Mandatory vaccines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10, 15,0,0),
+                      child: Text("Mandatory Vaccines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                     ),
                     SizedBox(
-                      height: 400,
+                      height: 310,
                       child: Container(
                         //color: Colors.grey[100],
                         child: GridView.count(
@@ -138,7 +138,7 @@ class _DuckHomeState extends State<DuckHome> {
                           scrollDirection: Axis.vertical,
                           children: child.vaccines.map((Vaccine vaccine) {
                             return Container(
-                              height: 250.0,
+                              height: 200.0,
                               child: Center(
                                 child: VaccineCard(vaccine)
                               ),
@@ -146,7 +146,11 @@ class _DuckHomeState extends State<DuckHome> {
                           }).toList(),
                         ),
                       ),
-                    )
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10, 15,0,0),
+                      child: Text("Recommended Vaccines", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    ),
                   ],
                 )),
               ),
