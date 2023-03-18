@@ -17,14 +17,11 @@ class VaccineScreen extends StatefulWidget {
 }
 
 class _VaccineScreenState extends State<VaccineScreen> {
-
-  Widget getDescriptionWidgets(){
-    List<Description> descriptions=widget.vaccine.descriptions;
+  Widget getDescriptionWidgets() {
+    List<Description> descriptions = widget.vaccine.descriptions;
     List<Widget> list = [];
-    for(var i = 0; i < descriptions.length; i++){
-      list.add(Row(
-          children: [ShowText(description: descriptions[i])]
-      ));
+    for (var i = 0; i < descriptions.length; i++) {
+      list.add(Row(children: [ShowText(description: descriptions[i])]));
     }
     return Column(children: list);
   }
@@ -40,27 +37,36 @@ class _VaccineScreenState extends State<VaccineScreen> {
         padding: const EdgeInsets.fromLTRB(20.0, 20, 20, 10),
         child: SingleChildScrollView(
             child: Expanded(
-              child: Column(
-          children: [
-              Hero(
-                tag: widget.vaccine.name!,
-                child: Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                    child: Image.asset(
-                      widget.vaccine.image!,
-                      fit: BoxFit.contain,
-                      width: 300,
-                      height: 300,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0,10,0,10),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Hero(
+                    tag: widget.vaccine.name!,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        child: Image.asset(
+                          widget.vaccine.image!,
+                          fit: BoxFit.contain,
+                          width: 50,
+                          height: 50,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  Text(
+                    widget.vaccine.name,
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  )
+                ]),
               ),
               const VideoDuck(),
               getDescriptionWidgets(),
-          ],
-        ),
-            )),
+            ],
+          ),
+        )),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
