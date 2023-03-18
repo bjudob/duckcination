@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         currentIndex: selectedIndex,
         fixedColor: Colors.black,
-        backgroundColor: Colors.orange[600],
+        backgroundColor: Colors.orange[50],
         onTap: onItemTapped,
         selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
       ),

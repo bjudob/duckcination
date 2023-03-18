@@ -36,8 +36,8 @@ class _BigButtonState extends State<BigButton> {
               gradient: LinearGradient(
                   colors: [Colors.grey[100]!,Colors.grey[400]!]),
               borderRadius: const BorderRadius.all(Radius.circular(20))),*/
-          decoration: const BoxDecoration(
-            color: Colors.white,
+          decoration: BoxDecoration(
+            color: Colors.orange.shade50,
               borderRadius: BorderRadius.all(Radius.circular(20))
           ),
           child: Padding(

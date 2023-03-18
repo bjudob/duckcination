@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../screens/vaccine_screen.dart';
 
 var statusColors = {
-  VaccineStatus.done: [Colors.lightGreen.shade300, Colors.lightGreen.shade200],
-  VaccineStatus.todo: [Colors.red.shade300, Colors.red.shade200],
+  VaccineStatus.done: [Colors.lightGreen.shade50, Colors.lightGreen.shade100],
+  VaccineStatus.todo: [Colors.red.shade50, Colors.red.shade100],
   VaccineStatus.later: [Colors.grey.shade300, Colors.grey.shade200],
 };
 
